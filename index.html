@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Graph</title>
+    <link rel="stylesheet" href="css/nouislider.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="loader"></div>
+<div class="pricing">
+    <div class="range__wr">
+        <div class="item">
+            <div class="range__desc">Storage: <b id="storageValue"></b></div>
+            <div id="storage"></div>
+        </div>
+        <div class="item">
+            <div class="range__desc">Transfer: <b id="transferValue"></b></div>
+            <div id="transfer"></div>
+        </div>
+    </div>
+    <div class="graph">
+        <div class="graph__item" data-min="7.0" data-storage="0.005" data-transfer="0.01" data-color="red">
+            <div class="graph__desc">
+                <div class="title">Backblaze</div>
+            </div>
+            <div class="progress__wr">
+                <div class="icon">
+                    <img src="img/backblaze.webp" alt="">
+                </div>
+                <div class="progress"></div>
+                <div class="progress__value"><b><i></i> $</b></div>
+            </div>
+        </div>
+        <div class="graph__item" data-max="10.0" data-storageHdd="0.01" data-storageSsd="0.02" data-transfer="0.01" data-checkbox="hdd" data-color="orange">
+            <div class="graph__desc">
+                <div class="title">Bunny</div>
+                <div class="checkbox__entry-wrap">
+                    <label class="checkbox__entry">
+                        <input type="radio" id="hdd" class="toggle__block" name="bunny" checked>
+                        <span>HDD</span>
+                    </label>
+                    <label class="checkbox__entry">
+                        <input id="ssd" type="radio" class="toggle__block" name="bunny">
+                        <span>SSD</span>
+                    </label>
+                </div>
+            </div>
+            <div class="progress__wr">
+                <div class="icon">
+                    <img src="img/bunny.webp" alt="">
+                </div>
+                <div class="progress"></div>
+                <div class="progress__value"><b><i></i> $</b></div>
+            </div>
+        </div>
+        <div class="graph__item" data-free="75" data-storageMulti="0.06" data-storageSingle="0.03" data-transfer="0.02" data-checkbox="multi" data-color="violet">
+            <div class="graph__desc">
+                <div class="title">Scaleway</div>
+                <div class="checkbox__entry-wrap">
+                    <label class="checkbox__entry">
+                        <input type="radio" id="multi" class="toggle__block" name="scaleway" checked>
+                        <span>Multi</span>
+                    </label>
+                    <label class="checkbox__entry">
+                        <input type="radio" id="single" class="toggle__block" name="scaleway">
+                        <span>Single</span>
+                    </label>
+                </div>
+            </div>
+            <div class="progress__wr">
+                <div class="icon">
+                    <img src="img/scaleway.webp" alt="">
+                </div>
+                <div class="progress"></div>
+                <div class="progress__value"><b><i></i> $</b></div>
+            </div>
+        </div>
+        <div class="graph__item" data-min="5.0" data-storage="0.01" data-transfer="0.01" data-color="blue">
+            <div class="graph__desc">
+                <div class="title">Vultr</div>
+            </div>
+            <div class="progress__wr">
+                <div class="icon">
+                    <img src="img/vultr.webp" alt="">
+                </div>
+                <div class="progress"></div>
+                <div class="progress__value"><b><i></i> $</b></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script defer src="js/nouislider.min.js"></script>
+<script defer src="js/app.js"></script>
+</body>
+</html>

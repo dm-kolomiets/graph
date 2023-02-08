@@ -1,0 +1,342 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*custom preload*/
+.loader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background-color: #ffffff;
+    -webkit-animation: loaderShow 1s linear;
+    animation: loaderShow 1s linear;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+/*keyframes*/
+@-webkit-keyframes loaderShow {
+    0% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    99% {
+        opacity: 0;
+    }
+    100% {
+        display: none;
+        visibility: hidden;
+        z-index: -10;
+        opacity: 0;
+    }
+}
+@keyframes loaderShow {
+    0% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    99% {
+        opacity: 0;
+    }
+    100% {
+        display: none;
+        visibility: hidden;
+        z-index: -10;
+        opacity: 0;
+    }
+}
+
+.pricing {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 24px;
+}
+
+/*range settings*/
+.range__wr {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 6rem;
+}
+
+.range__wr .item {
+    width: 100%;
+}
+
+.range__desc {
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+}
+
+.noUi-pips-horizontal {
+    margin-top: 4px;
+    height: auto;
+}
+
+.noUi-value {
+    margin-top: 8px;
+}
+
+/*media*/
+@media (max-width: 767px) {
+    .range__wr {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        gap: 4rem;
+    }
+
+    .pricing {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+        gap: 3rem;
+    }
+}
+/*end range settings*/
+
+/*graph*/
+.graph {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.graph__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.graph__desc {
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    min-width: 160px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.graph__desc > * {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.graph__desc > *:not(:last-child) {
+    margin-right: 8px;
+}
+
+.graph__desc .title {
+    font-size: 1.2rem;
+}
+
+.progress__wr {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.progress__wr .icon {
+    max-width: 40px;
+}
+
+.progress {
+    width: 100%;
+    background: grey;
+    height: 20px;
+}
+
+.progress__value {
+    font-size: 1.2rem;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+}
+
+/* media */
+@media (max-width: 575px) {
+    .graph__item {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+    }
+
+    .graph__item:first-child,
+    .graph__item:last-child {
+        padding-bottom: calc(48px + 0.5rem);
+    }
+
+    .graph {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .progress__wr {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+    }
+
+    .checkbox__entry-wrap {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        gap: .5rem;
+    }
+
+    .graph__desc {
+        -webkit-box-align:center;
+        -ms-flex-align:center;
+        align-items:center;
+        min-width: auto;
+    }
+
+    .progress__value {
+        font-size: .9rem;
+        text-align: center;
+    }
+}
+/*end graph*/
+
+/*checkbox*/
+.checkbox__entry {
+    display: inline-block;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    min-width: 30px;
+    min-height: 20px;
+}
+
+.checkbox__entry:not(:last-child) {
+    margin-right: 16px;
+}
+
+.checkbox__entry input {
+    display: none;
+}
+
+.checkbox__entry span {
+    position: relative;
+    font-size: 16px;
+    line-height: 20px;
+    padding-left: 24px;
+    display: block;
+    color: #5c5752;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+
+.checkbox__entry span:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 3px;
+    width: 14px;
+    height: 14px;
+    border: 1px grey solid;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+
+.checkbox__entry span:after {
+    content: "";
+    position: absolute;
+    left: 3px;
+    top: 6px;
+    width: 8px;
+    height: 8px;
+    background-color: green;
+    z-index: 1;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+
+.checkbox__entry input:checked + span:before {
+    border-color: green;
+}
+
+.checkbox__entry input:checked + span:after {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
+/*end checkbox*/
